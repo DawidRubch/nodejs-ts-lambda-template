@@ -1,0 +1,17 @@
+service: gpt-statements-api
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+  region: us-east-2
+
+functions:
+  app:
+    handler: dist/index.handler
+    events:
+      - http:
+          path: /
+          method: any
+      - http:
+          path: /{proxy+}
+          method: any
