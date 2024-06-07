@@ -7,7 +7,8 @@
     "start": "nodemon",
     "build": "tsc",
     "serve": "node build/index.js",
-    "deploy": "npm run build && sls deploy"
+    "deploy": "npm run build && sls deploy",
+    "dev": "nodemon"
   },
   "author": "",
   "license": "ISC",
